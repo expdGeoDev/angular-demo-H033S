@@ -21,4 +21,8 @@ export class CoffeeDataService {
 	findByBrand(brandName: string): Coffee[] | undefined {
 		return this.coffeeData.filter((coffee) => coffee.brand === brandName);
 	}
+
+	addNewCoffee(coffee: Coffee): void {
+		this.coffeeData.push(coffee);
+	}
 }

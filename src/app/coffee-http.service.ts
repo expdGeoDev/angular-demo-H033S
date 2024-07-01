@@ -13,4 +13,18 @@ export class CoffeeHttpService {
 	getAllBeans(): Observable<Coffee[]> {
 		return this.client.get<Coffee[]>(`${this.baseUrl}/coffee`);
 	}
+
+	addNewCoffee(coffee: Coffee) {
+		this.client
+			.post(`${this.baseUrl}/coffee`, JSON.stringify(coffee), {
+				headers: {
+					Accept: 'application/json',
+					'Cache-Control': 'no-cache',
+					'Content-Type': 'application/json',
+				},
+			})
+			.subscribe();
+
+		console.log(`Added ${coffee.brand}`);
+	}
 }

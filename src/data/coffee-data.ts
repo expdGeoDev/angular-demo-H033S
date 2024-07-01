@@ -25,8 +25,8 @@ export const coffeeData: Coffee[] = [
 	},
 ];
 
-type RoastType = 'light' | 'medium' | 'dark';
-type GroundOrBeans = 'ground' | 'beans';
+export type RoastType = 'light' | 'medium' | 'dark' | '';
+export type GroundOrBeans = 'ground' | 'beans' | '';
 
 export interface Coffee {
 	id: number;
@@ -35,6 +35,7 @@ export interface Coffee {
 	groundOrBeans: GroundOrBeans;
 	// If you want to limit the numeric values, look here: https://stackoverflow.com/a/39495173
 	grind?: number;
+
 	singleOrigin?: boolean;
 	flavorNotes?: string;
 }

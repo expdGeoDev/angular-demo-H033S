@@ -23,15 +23,6 @@
       "brand": "Starbucks",
       "roast": "medium",
       "groundOrBeans": "ground"
-    },
-    {
-      "id": 5,
-      "brand": "Cuban Coffee",
-      "groundOrBeans": "",
-      "roast": "",
-      "grind": 3,
-      "singleOrigin": false,
-      "flavorNotes": ""
     }
   ]
 }

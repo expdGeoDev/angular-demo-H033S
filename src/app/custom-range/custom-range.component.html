@@ -1,0 +1,25 @@
+<style> ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+	display:inline;
+}
+</style>
+
+<div>
+	<label class="form-label" for="elements">{{label}} : {{getCurrentValue()}}</label>
+	<ul class="d-flex justify-content-between form-control" id='elements'>
+		<li class="list-inline-item"><p id="minValue">{{getMinimumValue()}}</p></li>
+		<li class="list-inline-item">
+			<input type="range"
+						 class="form-range"
+						 #ctmRng
+						 id="rng"
+						 min=0
+						 [max]="maxValue"
+						 (input)="setValueOnIndex(ctmRng.value)"
+			>
+		</li>
+		<li class="list-inline-item"><p id="maxValue">{{getMaximumValue()}}</p></li>
+	</ul>
+</div>

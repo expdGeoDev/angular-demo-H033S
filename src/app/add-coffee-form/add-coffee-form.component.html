@@ -79,15 +79,20 @@
 			</div>
 		</div>
 
-		<div>
-			<input type="number"
-						 id="grind"
-						 name="grind"
-						 placeholder="Grind"
-						 class="form-control my-3"
-						 [(ngModel)]="coffee.grind"
-					>
-		</div>
+		<!--<div>-->
+		<!--	<input type="number"-->
+		<!--				 id="grind"-->
+		<!--				 name="grind"-->
+		<!--				 placeholder="Grind"-->
+		<!--				 class="form-control my-3"-->
+		<!--				 [(ngModel)]="coffee.grind"-->
+		<!--			>-->
+		<!--</div>-->
+
+		<app-custom-range
+			[elements]="grindLevelList"
+			[label]="'Grind Level'"
+		></app-custom-range>
 
 		<div>
 			<label class="form-label" for="flavorNotes">Flavor Notes</label>
